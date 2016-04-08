@@ -8,7 +8,8 @@ let count = 40;
 
 // let servers = ['couchbase://192.168.1.36', 'couchbase://192.168.1.37', 'couchbase://192.168.1.42'];
 // let servers = ['couchbase://192.168.1.36', 'couchbase://192.168.1.37'];
-let servers = ['couchbase://194.226.171.146'];
+// let servers = ['couchbase://194.226.171.146'];
+let servers = ['couchbase://192.168.1.36'];
 let response_count = 0;
 let errors = 0;
 let total = 0;
