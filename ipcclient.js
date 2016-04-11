@@ -4,6 +4,11 @@ const ipc = require('node-ipc');
 
 let _ = require('lodash');
 let couchbase = require('couchbase');
+let busy = require('busy');
+
+let busyCheck = busy(function (amount) {
+	console.log('Loop was busy for', amount, 'ms');
+});
 
 let myCluster;
 let myBucket;
@@ -51,6 +56,9 @@ ipc.of.world.on(
 ipc.of.world.on(
 	'app.get',
 	function (data) {
+		// if (busyCheck.blocked) {
+		// 	console.log("I'm busy right now, sorry.");
+		// }
 		get(data.id);
 	}
 );

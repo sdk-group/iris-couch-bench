@@ -3,13 +3,13 @@ const ipc = require('node-ipc');
 let child_process = require('child_process');
 
 let ready = 0;
-let mult = 800;
+let mult = 100;
 let max_ticket = 200;
 let count = mult * max_ticket;
 let response_count = 0;
 let errors = 0;
 
-let slaves_count = 20;
+let slaves_count = 2;
 let processes = [];
 let cursor = 0;
 let time;
